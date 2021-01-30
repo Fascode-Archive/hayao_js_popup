@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポップアップ</title>
+    <link rel="stylesheet" href="./hjp-popup.css">
+</head>
+<body>
+    <header>
+        <h1>ポップアップを表示するJSとCSS</h1>
+    </header>
+    <main>
+        <p>ここにはメインのコンテンツが入ります。</p>
+        <input type="button" value="作者について" onclick="about_hayao.open()">
+        <input type="button" value="使い方" onclick="usage.open()">
+    </main>
+
+    <!-- ポップアップ参考: http://jstech.web.fc2.com/html0002/index.html -->
+    <!-- 作者についてのポップアップ -->
+    <span id="about_hayao" class="hjp-popup" data-hjpname="about_hayao">
+        <h1>山田ハヤオ</h1>
+        <p>最近HTMLとJSとCSSを勉強し始めた高校生</p>
+        <p>基本的にツイ廃でArch Linuxが大好き</p>
+        <p><a href="https://twitter.com/Hayao0819">作者のツイッター</a></p>
+    </span>
+
+    <!-- 使い方のポップアップ -->
+    <span id="usage" class="hjp-popup" data-hjpname="usage">
+        <h1>使い方</h1>
+        <ol>
+            <li><code>hjp-popup.css</code>と<code>hjp-popup.js</code>を読み込む</li>
+            <li>
+                <code>&lt;span id=&quot;yourid&quot; class=&quot;hjp-popup&quot; data-hjpname=&quot;yourpopupname&quot;&gt;&lt;/span&gt;</code>を作成
+            </li>
+            <li>
+                作成したspanの中にポップアップしたいHTMLを記述
+            </li>
+            <li>
+                作成したspanの<code>id</code>と<code>data-hjpname</code>を書き換える
+                <br>
+                この2つは好きな値を指定できる。<code>class</code>は書き換えない。
+            </li>
+            <li>
+                <code>date-hjpname</code>で指定した名前に<code>.open()</code>とつけた関数を実行するとポップアップを開く
+            </li>
+            <li>
+                <code>date-hjpname</code>で指定した名前に<code>.close()</code>とつけた関数を実行するとポップアップを閉じる
+            </li>
+            <li>
+                ポップアップ内のCSSを好きに書き換える
+            </li>
+        </ol>
+    </span>
+
+    <!-- JavaScript を読み込む -->
+    <script src="./hjp-popup.js"></script>
+</body>
+</html>
