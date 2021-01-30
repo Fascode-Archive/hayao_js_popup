@@ -39,7 +39,7 @@ function generate_popup() {
     popup_list.forEach(function(_popup){
         var _create_popup_js_code=`${_popup.dataset.hjpname} = new Popup("${_popup.id}");`
         eval(_create_popup_js_code);
-        console.log(_create_popup_js_code);
+        //console.log(_create_popup_js_code);
 
     });
 }
